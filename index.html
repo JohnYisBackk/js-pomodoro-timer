@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Pomodoro Timer PRO</title>
+  </head>
+  <body>
+    <main class="pomodoro-app">
+      <section class="timer-card">
+        <div class="app-header">
+          <p class="eyebrow">Focus Mode</p>
+          <h1>Pomodoro PRO</h1>
+          <span>Stay focused. Track your sessions.</span>
+        </div>
+
+        <div class="mode-tabs">
+          <button class="mode-btn active" data-mode="focus">Focus</button>
+          <button class="mode-btn" data-mode="short">Short Break</button>
+          <button class="mode-btn" data-mode="long">Long Break</button>
+        </div>
+
+        <div class="timer-circle">
+          <div class="timer-progress">
+            <span id="timerLabel">Focus Time</span>
+            <strong id="timerDisplay">25:00</strong>
+          </div>
+        </div>
+
+        <div class="timer-actions">
+          <button id="startBtn" class="primary-btn">Start</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+
+        <section class="settings-grid">
+          <div>
+            <label for="focusInput">Focus</label>
+            <input type="number" id="focusInput" value="25" min="1" />
+          </div>
+
+          <div>
+            <label for="shortInput">Short</label>
+            <input type="number" id="shortInput" value="5" min="1" />
+          </div>
+
+          <div>
+            <label for="longInput">Long</label>
+            <input type="number" id="longInput" value="15" min="1" />
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article>
+            <strong id="sessionCount">0</strong>
+            <span>Sessions</span>
+          </article>
+
+          <article>
+            <strong id="totalFocus">0 min</strong>
+            <span>Total Focus</span>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
